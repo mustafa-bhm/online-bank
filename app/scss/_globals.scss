@@ -48,3 +48,11 @@ button,
   cursor: pointer;
   font-weight: 400;
 }
+
+// visibility
+.hide-for-mobile {
+  // hide for tablet and mobile => elemnts that will be hidden for mobile display
+}
+.hide-for-desktop {
+  // hide for desktop viewport width => elemnts that will be hidden for desktop display
+}
