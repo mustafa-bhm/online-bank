@@ -39,7 +39,7 @@ a:visited a:hover {
 
 button,
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 1.875rem;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   border: 0;
   color: white;
@@ -48,8 +48,24 @@ button,
   font-weight: 400;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5rem;
+}
+.header img {
+  width: 8.8125rem;
+  height: 1.375rem;
 }
 .header__menu > span {
   display: block;
@@ -61,10 +77,37 @@ button,
   margin-bottom: 3px;
 }
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: hsl(233deg, 8%, 62%);
+}
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+.header__links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+}
+.header__links a:hover {
+  color: hsl(233deg, 26%, 24%);
+  transition: color 400ms ease-in-out;
+}
+.header__links a:hover::before {
+  opacity: 1;
+  transition: opacity 400ms ease-in-out;
 }
 .header__cta {
   font-size: 0.875rem;
   color: white;
+  transition: opacity 300ms ease-in-out;
+}
+.header__cta:hover {
+  opacity: 0.75;
 }/*# sourceMappingURL=style.css.map */

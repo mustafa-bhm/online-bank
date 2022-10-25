@@ -40,7 +40,7 @@ a:visited a:hover {
 // button
 button,
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 1.875rem;
   background: linear-gradient(to right, $limeGreen, $brightCyan);
   border: 0;
   color: white;
@@ -52,7 +52,13 @@ button,
 // visibility
 .hide-for-mobile {
   // hide for tablet and mobile => elemnts that will be hidden for mobile display
+  @include breakpoint_down(medium) {
+    display: none;
+  }
 }
 .hide-for-desktop {
   // hide for desktop viewport width => elemnts that will be hidden for desktop display
+  @include breakpoint_up(large) {
+    display: none;
+  }
 }
