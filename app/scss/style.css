@@ -321,19 +321,20 @@ button:hover,
   position: absolute;
   height: 100%;
   width: 100%;
+  background-image: url("/images/image-mockups.png");
   background-size: 93%;
   background-position: center bottom;
 }
 @media (min-width: 40em) {
   .hero__image::after {
     background-size: 52%;
+    background-repeat: no-repeat;
   }
 }
 @media (min-width: 64em) {
   .hero__image::after {
     width: 120%;
     height: 122%;
-    background-image: url("/images/image-mockups.png");
     background-size: 94%;
     background-repeat: no-repeat;
     background-position: center 150%;
